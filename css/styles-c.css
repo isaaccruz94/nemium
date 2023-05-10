@@ -176,6 +176,7 @@ hr + .section-content h3{
     scroll-behavior: smooth;
     font-size: 0;
     margin-block-end: 16px;
+    overflow-x: hidden;
 }
 .slider-slide .video{
     display: inline-block;

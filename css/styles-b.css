@@ -154,6 +154,7 @@ section > ul li::marker{
     white-space: nowrap;
     scroll-behavior: smooth;
     font-size: 0;
+    overflow-x: hidden;
 }
 .slider-slide .video{
     display: inline-block;
