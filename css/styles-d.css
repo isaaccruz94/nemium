@@ -31,7 +31,7 @@ pre{
 /*    Fin estilos generales del documento    */
 /*    Estilos del header y navegacion    */
 .hero{
-    background: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(/images/patron-circular.png);
+    background: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url('../images/patron-circular.png');
     block-size: 96px;
     margin-block-end: 16px;
     
@@ -71,7 +71,7 @@ nav > p{
     display: none;
 }
 nav details summary::before{
-    content: url(/images/bullet-obscuro-cerrado.png);
+    content: url('../images/bullet-obscuro-cerrado.png');
     margin-inline-end: 11px;
     
 }
@@ -79,7 +79,7 @@ nav details[open] summary{
     color: var(--black);
 }
 nav details[open] summary::before{
-    content: url(/images/bullet-obscuro-abierto.png);
+    content: url('../images/bullet-obscuro-abierto.png');
     margin-inline-end: 11px;
     color: red;
 }

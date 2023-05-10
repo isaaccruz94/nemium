@@ -283,11 +283,11 @@ footer p{
     }
     nav summary::before{
         display: inline-block;
-        content: url(/images/bullet-obscuro-cerrado.png);
+        content: url('../images/bullet-obscuro-cerrado.png');
         margin-inline-end: 11px;
     }
     nav details[open] summary::before{
-        content: url(/images/bullet-obscuro-abierto.png);
+        content: url('../images/bullet-obscuro-abierto.png');
     }
     nav details ol{
         padding-inline-start: 16px;

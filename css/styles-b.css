@@ -265,11 +265,11 @@ footer p{
         cursor: pointer;
     }
     nav details summary::before{
-        content: url(/images/bullet-claro-cerrado.png);
+        content: url('../images/bullet-claro-cerrado.png');
         margin-inline-end: 11px;
     }
     nav details[open] summary::before{
-        content: url(/images/bullet-claro-abierto.png);
+        content: url('../images/bullet-claro-abierto.png');
     }
     nav details li{
         margin-block: 16px;
