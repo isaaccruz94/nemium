@@ -1,0 +1,324 @@
+/*    Declaracion de variables del proyecto    */
+:root{
+    --dark-10: #424242;
+    --dark-20: #212429;
+    --dark-30: #212121;
+    --light-10: #616161;
+    --light-20: #E5E5E5;
+}
+/*    Fin declaracion de variables    */
+/*    Estilos globales en el proyecto    */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-10);
+}
+img{
+    display: block;
+    max-inline-size: 100%;
+}
+pre{
+    overflow: auto;
+}
+.wrapper{
+    inline-size: 328px;
+    margin-inline: auto;
+}
+/*    Fin de estilos globales en el proyecto    */
+/*    Estilos del header y navegacion   */
+h1,h2,h3{
+    font-weight: 400;
+}
+h1{
+    font-size: 2em;
+    margin-block: 40px 16px;
+    color: var(--dark-30);
+}
+h1 + p{
+    color: var(--dark-30);
+}
+.nav-bar{
+    margin-block: 40px;
+    font-size: 14px;
+    color: var(--light-10);
+}
+.nav-bar > p{
+    text-transform: uppercase;
+}
+.nav-bar > ol{
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-end: 48px;
+}
+.nav-bar ol li{
+    margin-block: 16px;
+    padding: 8px;
+    font-weight: 500;
+}
+ol a{
+    text-decoration: none;
+    color: var(--light-10);
+}
+.selector{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+}
+nav{
+    color: var(--light-10);
+    border-inline-start: 4px solid #c4c4c4;
+}
+.nav-bar > ol + p{
+    margin-block-end: 16px;
+}
+details summary{
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+}
+details ol{
+    padding-inline-start: 16px;
+}
+details{
+    padding-inline-start: 16px;
+}
+nav details:first-of-type{
+    margin-block-end: 24px;
+}
+nav details a:hover{
+    color: var(--dark-30);
+}
+/*    Fin estilos del header y navegacion   */
+/*    Estilos del main    */
+hr{
+    display: none;
+}
+.nav-bar{
+    margin-block-end: 118px;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.25em;
+    margin-block-end: 16px;
+}
+.section-content:first-of-type h2{
+    display: none;
+}
+.section-content:first-of-type img{
+    margin-block: 40px 16px;
+    inline-size: 48px;
+    block-size: 48px;
+}
+.section-content h3{
+    counter-increment: theNumbers;
+}
+.section-content h3::before{
+    content: counter(theNumbers,decimal)". ";
+}
+blockquote{
+    margin-block: 40px;
+    line-height: 32px;
+    border-inline-start: 4px solid var(--dark-30);
+    padding-inline-start: 16px;
+}
+blockquote span{
+    color: var(--light-10);
+}
+blockquote span::before{
+    content: "- ";
+}
+.section-content h2{
+    margin-block-end: 24px;
+}
+pre{
+    background-color: var(--light-20);
+    padding: 16px;
+    border-radius: 8px;
+}
+hr + .section-content{
+    margin-block-end: 40px;
+}
+hr + .section-content h3{
+    margin-block: 24px 16px;
+}
+.box-model h2{
+    font-size: 32px;
+    margin-block: 24px;
+}
+.box-model{
+    margin-block-end: 24px;
+}
+.box-model ol, .box-model ul{
+    padding-inline-start: 19px;
+}
+.box-model ol{
+    line-height: 24px;
+}
+.box-model > ol ~ h3{
+    font-size: 24px;
+}
+/*    Fin estilos del main    */
+/*    Estilos del componente slider    */
+.slider-component{
+    margin-block-end: 40px;
+}
+.slider-component h3{
+    font-size: 24px;
+}
+.slider-container{
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 0;
+    margin-block-end: 16px;
+}
+.slider-slide .video{
+    display: inline-block;
+    inline-size: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.bullet-list{
+    text-align: center;
+}
+.bullet-list a{
+    display: inline-block;
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 50%;
+    background-color: var(--dark-10);
+}
+.box-model ul li{
+    margin-block: 16px;
+}
+/*    Fin estilos del componente slider    */
+/*    Contacto y footer    */
+.contact{
+    margin-block-end: 40px;
+}
+.contact  p:first-child{
+    display: none;
+}
+.contact  p{
+    font-size: 20px;
+    margin-inline-end: 16px;
+}
+form{
+    position: relative;
+}
+input{
+border: 1px solid var(--dark-20);
+display: inline-block;
+inline-size: 328px;
+block-size: 48px;
+border-radius: 90px;
+padding-inline: 16px;
+padding-block: 12px;
+box-sizing: border-box;
+margin-block-end: 16px;
+}
+[type="submit"]{
+    font-weight: 500;
+    position: absolute;
+    background-color: #000000;
+    color: #ffffff;
+    inline-size: 115px;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+}
+footer{
+    background-color: var(--dark-20);
+    color: #ffffff;
+    font-size: 24px;
+    block-size: 174px;
+    text-align: center;
+    padding-block-start: 48px;
+}
+/*    Fin contacto y footer    */
+@media screen and (min-width:1366px){
+    .wrapper{
+        inline-size: 966px;
+    }
+    h1{
+        font-size: 3.75em;
+        margin-block-start: 80px;
+        color: var(--dark-30);
+    }
+    .nav-bar{
+        margin-block-start: 64px;
+        inline-size: 280px;
+    }
+    .nav-bar > ol{
+        margin-block-end: 112px;
+    }
+    .nav-bar + hr{
+        display: block;
+        border: 1px solid #61616133;
+        margin-block: 64px;
+    }
+    .nav-bar{
+        margin-block-end: 0;
+    }
+    .section-content:first-of-type > h2{
+        display: initial;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    .section-content:first-of-type img{
+        margin-block: 40px 16px;
+        inline-size: 80px;
+        block-size: 80px;
+    }
+    blockquote{
+        margin-block: 80px;
+        font-size: 24px;
+    }
+    pre{
+        padding: 40px;
+    }
+    hr + .section-content h3{ 
+        margin-block-start: 40px;
+    }
+    .box-model{
+        margin-block-start: 162px;
+    }
+    .slider-component h3{
+        margin-block-end: 16px;
+    }
+    h3 ~ ol, h3 ~ ul{
+        margin-block-end: 40px;
+    }
+    .contact p:first-of-type{
+        display: initial;
+        font-size: 16px;
+    }
+    .contact p:first-of-type a{
+        color: #000000;
+    }
+    .contact p:last-of-type{
+        font-size: 24px;
+    }
+    form{
+        inline-size: 633px;
+        block-size: 48px;
+        white-space: nowrap;
+    }
+    input{
+        inline-size: 280px;
+    }
+    [type="submit"]{
+        margin: 0;
+    }
+    footer p{
+        font-size: 32px;
+    }
+}

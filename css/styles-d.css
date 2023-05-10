@@ -1,0 +1,354 @@
+/*    Variables del documento    */
+:root{
+    --black: #000000;
+    --gray-10: #545454;
+    --gray-20: #616161;
+    --primary: #5551FF; 
+    --nav: 'Roboto', sans-serif;
+    --body: 'Rubik', sans-serif;
+}
+/*    Fin variables del documento    */
+/*    Estilos generales del documento    */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--body);
+    
+}
+.wrapper{
+    inline-size: 328px;
+    margin-inline: auto;
+}
+img{
+    max-inline-size: 100%;
+    display:block;
+    margin-inline: auto;
+}
+pre{
+    overflow: auto;
+}
+/*    Fin estilos generales del documento    */
+/*    Estilos del header y navegacion    */
+.hero{
+    background: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(/images/patron-circular.png);
+    block-size: 96px;
+    margin-block-end: 16px;
+    
+}
+.header-content{
+    font-size: 14px;
+    font-family: var(--nav);
+}
+.header > p{
+    text-transform: uppercase;
+    margin-block-end: 24px;
+    color: var(--gray-20);
+}
+.header > ol{
+    list-style: none;
+    padding-inline-start: 19px;
+    margin-block-end: 40px;
+}
+.header > ol li{
+    font-weight: 500;
+    margin-block: 16px;
+    padding: 8px;
+}
+.header > ol a{
+    text-decoration: none;
+    color: var(--gray-20);
+}
+.selector{
+    background-color: var(--black);
+    color: #ffffff;
+    border-radius: 8px;
+}
+nav{
+    font-family: var(--body);
+}
+nav > p{
+    display: none;
+}
+nav details summary::before{
+    content: url(/images/bullet-obscuro-cerrado.png);
+    margin-inline-end: 11px;
+    
+}
+nav details[open] summary{
+    color: var(--black);
+}
+nav details[open] summary::before{
+    content: url(/images/bullet-obscuro-abierto.png);
+    margin-inline-end: 11px;
+    color: red;
+}
+nav details:last-of-type{
+    margin-block-start: 24px;
+}
+nav details summary{
+    list-style: none;
+    font-weight: 700;
+    margin-block-end: 24px;
+    color: #00000080;
+}
+nav details ol{
+    list-style-position: inside;
+    padding-inline-start: 0;
+}
+nav details ol li{
+    margin-block: 16px;
+    padding: 8px;
+}
+nav details ol li a{
+    text-decoration: none;
+    color: var(--black);
+}
+nav details ol li:hover, details ol a:hover{
+    background-color: var(--primary);
+    color: #ffffff;
+}
+/*    Fin header y navegacion    */
+/*    Estilos del main    */
+main{
+    text-align: center;
+    color: var(--gray-10);
+}
+h1{
+    font-size: 28px;
+    font-weight: 700;
+    padding-inline: 16px;
+    color: var(--black);
+}
+h2{
+    color: var(--black);
+}
+hr{
+    margin-block: 40px;
+}
+.section-content:first-of-type h2{
+    font-size: 32px;
+    font-weight: 400;
+}
+.section-content:first-of-type img{
+    margin-block: 40px 16px;
+}
+h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--black);
+}
+blockquote{
+    margin-block: 40px;
+    text-align: left;
+    border-inline-start: 4px solid var(--primary);
+    padding-inline-start: 16px;
+    line-height: 32px;
+}
+pre{
+    text-align: left;
+    border: 8px solid var(--primary);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: -10px 10px 0px 0px #ABAAF6;
+}
+.section-content h3{
+    counter-increment: theNumbers;
+}
+.section-content h3::before{
+    content: counter(theNumbers,decimal)". ";
+}
+.section-content:last-of-type{
+    margin-block-end: 40px;
+}
+.section-content:last-of-type h3{
+    margin-block: 40px 16px;
+}
+.box-model{
+    text-align: left;
+}
+.box-model h2{
+    font-weight: 400;
+    margin-block: 40px;
+}
+.box-model h3{
+    margin-block-end: 16px;
+}
+.box-model ol{
+    padding-inline-start: 19px;
+    line-height: 24px;
+    margin-block-end: 40px;
+}
+.box-model ul{
+    margin-block-end: 40px;
+    padding-inline-start: 19px;
+}
+.box-model ul li{
+    margin-block: 16px;
+}
+.box-model ul li::marker{
+    color: var(--primary);
+}
+.slider-container{
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    font-size: 0;
+    margin-block-end: 16px;
+}
+.slider-slide .video{
+    display: inline-block;
+    inline-size: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.bullets-slider{
+    margin-block-end: 40px;
+}
+.bullets-slider a{
+    display: inline-block;
+    background: #8E2DE280;
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 50%;
+}
+[href="#video-two"]{
+    margin-inline: 8px;
+}
+/*    Fin estilos del main    */
+/*    Estilos de formulario    */
+.contact{
+    text-align: left;
+}
+.contact p:first-of-type a{
+    color: #000000;
+}
+.contact p:first-of-type{
+    margin-block-end: 40px;
+}
+.contact p:last-of-type{
+    font-size: 24px;
+}
+form{
+    position: relative;
+    margin-block-end: 40px;
+}
+input{
+    border: 1px solid #000000;
+    inline-size: 328px;
+    height: 48px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    border-radius: 90px;
+    box-sizing: border-box;
+    margin-block: 16px;
+}
+input::placeholder{
+    color: #000000;
+}
+[type="submit"]{
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 500;
+    inline-size: 120px;
+    border: 1px solid var(--primary);
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+}
+footer{
+    color: #ffffff;
+    background-color: #000000;
+    font-family: var(--nav);
+    font-size: 24px;
+    block-size: 174px;
+}
+.footer-content{
+    text-align: center;
+}
+.footer-content p{
+    padding-block-start: 48px;
+}
+@media screen and (min-width:1366px){
+    .wrapper{
+        inline-size: 903px;
+    }
+    .hero{
+        block-size: 350px;
+        margin-block-end: 64px;
+    }
+    .herader > p{
+        margin-block-start: 0;
+    }
+    nav{
+        margin-block-start: 104px;
+    }
+    nav > p{
+        display: block;
+        text-transform: uppercase;
+    }
+    h1{
+        font-size: 60px;
+        margin-block-end: 16px;
+    }
+    h2{
+        font-size: 32px;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 24px;
+        margin-block: 16px;
+    }
+    hr{
+        margin-block: 64px;
+    }
+    .header-content{
+        inline-size: 208px;
+        position: absolute;
+    }
+    .header{
+        position: relative;
+        inset-inline-start: 926px;
+    }
+    header{
+        position: sticky;
+        inset-block-start: 0;
+    }
+    blockquote{
+        font-size: 24px;
+        margin-block: 64px;
+        inline-size: 633px;
+        margin-inline: auto;
+    }
+    .section-content + .section-content h2{
+        margin-block-end: 40px;
+    } 
+    .section-content + .section-content h3{
+        margin-block: 40px 16px;
+    }
+    .box-model{
+        margin-block-start: 154px;
+    }
+    .contact p:first-of-type{
+        margin-block-end: 40px;
+    }
+    .contact p:last-of-type{
+        margin-block-end: 16px;
+    }
+    form{
+        inline-size: 640px;
+    }
+    input{
+        display: inline-block;
+        margin-block: 0;
+        inline-size: 280px;
+    }
+    [type="text"]{
+        margin-inline-end: 16px;
+    }
+    footer p{
+        font-family: var(--body);
+        font-size: 32px;
+    }
+}

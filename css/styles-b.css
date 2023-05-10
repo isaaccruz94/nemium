@@ -1,0 +1,361 @@
+/*    Variables usadas en el proyecto    */
+:root{
+    --dark: #3A3539;
+    --light-10: #A5A3A5;
+    --light-20: #FFFFFF;
+    --primary: #157EFB;
+}
+/*    Fin variables usadas en el proyecto    */
+/*    Estilos globales del proyecto    */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: var(--light-10);
+    font-size: 17px;
+    font-weight: 700;
+    background: #251F24;
+}
+header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.wrapper{
+    inline-size: 328px;
+    margin-inline: auto;
+}
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+/*    Fin estilos globales del proyecto    */
+/*    Estilos del header    */
+.hero{
+    block-size: 96px;
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    margin-block-end: 16px;
+}
+.header-content{
+    margin-block-end: 40px;
+}
+.selector{
+    background-color: #000000;
+    color: var(--light-20);
+    border-radius: 4px;
+}
+.nav-bar > p {
+    text-transform: uppercase;
+    color: var(--light-20);
+    margin-block-end: 24px;
+}
+.nav-bar > ol{
+    list-style: none;
+    padding-inline-start: 8px;
+}
+.nav-bar > ol li{
+    margin-block: 16px;
+    padding: 8px;
+}
+.nav-bar > ol a{
+    color: var(--light-10);
+    text-decoration: none;
+}
+nav{
+    display: none;
+}
+/*    Fin estilos del header    */
+/*    Estilos del main    */
+main{
+    font-family: 'Nunito', sans-serif;
+}
+h1,h2,h3{
+    color: var(--light-20);
+    font-weight: 400;
+}
+h1,h2{
+    font-size: 1.41em;
+}
+h1{
+    margin-inline-end: 16px;
+}
+h2{
+    margin-block: 24px;
+}
+h3{
+    font-size: 1.17em;
+}
+hr{
+    border: 1px solid rgba(97, 97, 97, 0.2);
+    margin-block: 40px;
+}
+.section-content img{
+    inline-size: 48px;
+    block-size: 48px;
+    margin-block: 24px 16px;
+}
+.section-content h3{
+    margin-block-end: 16px;
+    counter-increment: theNumbers;
+}
+.section-content h3::before{
+    content: counter(theNumbers)". ";
+}
+section + hr{
+    display: none;
+}
+blockquote{
+    margin-block: 40px;
+    background-color: var(--dark);
+    color: var(--light-20);
+    border-radius: 8px;
+}
+blockquote p{
+    margin: 0;
+    line-height: 32px;
+    padding: 8px;
+}
+blockquote p:first-of-type{
+    margin-block-end: 16px;
+}
+blockquote span::before{
+    content: "- ";
+}
+pre{
+    background-color: var(--dark);
+    color: var(--light-20);
+    font-size: 16px;
+    padding: 16px;
+    margin-block: 16px 24px;
+    overflow: auto;
+    border-radius: 8px;
+}
+#css ~ img{
+    margin-block: 16px 40px;
+}
+section > ol, section > ul{
+    line-height: 24px;
+    padding-inline-start: 18px;
+}
+section > ul li{
+    margin-block: 16px;
+}
+section > ul li::marker{
+    color: var(--light-20);
+}
+/*    Fin estilos del main    */
+/*    Estilos del Slider    */
+.slider{
+    margin-block-end: 40px;
+}
+.slider-container{
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    font-size: 0;
+}
+.slider-slide .video{
+    display: inline-block;
+    inline-size: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.bullet-list{
+    text-align: center;
+    
+}
+.bullet-list a{
+    display: inline-block;
+    inline-size: 16px;
+    block-size: 16px;
+    background-color: var(--light-20);
+    margin-block-start: 16px;
+    border-radius: 50%;
+}
+/*    Fin estilos del Slider    */
+/*    Estilos de contacto y footer    */
+.section-contact{
+    color: var(--light-20);
+    font-weight: 400;
+    margin-block-end: 40px;
+}
+.section-contact p a{
+    color: var(--primary);
+}
+input{
+    box-sizing: border-box;
+    border: 1px solid var(--light-20);
+    background-color: transparent;
+    inline-size: 328px;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    margin-block-end: 16px;
+}
+input::placeholder{
+    color: var(--light-20);
+}
+[type="submit"]{
+    background-color: var(--primary);
+    color: var(--light-20);
+    font-weight: 700;
+    border: 1px solid var(--primary);
+}
+footer{
+    block-size: 174px;
+    background-color: var(--light-20);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+footer p{
+    color: #000000;
+    font-size: 24px;
+    line-height: 28px;
+    padding-block-start: 48px;
+}
+/*    Fin estilos de contacto y footer    */
+/*    Estilos de dipositivo diferente    */
+@media screen and (min-width:1366px){
+    /* Estilos del header y navegacion */
+    .wrapper{
+        inline-size: 636px;
+    }
+    .hero{
+        block-size: 350px;
+        margin-block-end: 64px;
+    }
+    header{
+        position: sticky;
+        inset-block-start: 0;
+    }
+    .header-content{
+        inline-size: 306px;
+        position: absolute;
+    }
+    .nav-bar{
+        position: relative;
+        inset-inline-start: -330px;
+    }
+    .nav-bar p{
+        margin-block-start: 0;
+    }
+    .nav-bar > ol{
+        margin-block-end: 104px;
+    }
+    nav{
+        display: initial;
+        font-family: 'Nunito', sans-serif;
+    }
+    nav p{
+        text-transform: uppercase;
+        color: var(--light-20);
+        margin-block-end: 24px;
+    }
+    nav > details{
+        margin-block-end: 24px;
+    }
+    nav details{
+        inline-size: 190px;
+    }
+    nav details summary{
+        font-weight: 700;
+        color: var(--light-20);
+        list-style: none;
+        cursor: pointer;
+    }
+    nav details summary::before{
+        content: url(/images/bullet-claro-cerrado.png);
+        margin-inline-end: 11px;
+    }
+    nav details[open] summary::before{
+        content: url(/images/bullet-claro-abierto.png);
+    }
+    nav details li{
+        margin-block: 16px;
+    }
+    nav details li a{
+        padding: 8px;
+        text-decoration: none;
+        color: var(--light-10);
+    }
+    nav details li a:hover{
+        color: var(--light-20);
+    }
+    /*    Fin estilos del header y navegacion */
+    /*    Estilos del main    */
+    main{
+        font-weight: 400;
+    }
+    h1{
+        font-size: 64px;
+        font-weight: 700;
+        margin-block-end: 16px;
+    }
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        margin-block-end: 40px;
+    }
+    h3{
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .section-content img{
+        inline-size: 80px;
+        block-size: 80px;
+        margin-block-start: 40px;
+    }
+    section h3{
+        margin-block: 40px 16px;
+    }
+    .section-content h3{
+        margin-block: 16px;
+    }
+    blockquote{
+        inline-size: 636px;
+        padding-inline: 24px;
+        padding-block: 24px;    
+        font-size: 24px;
+        margin-block: 80px 63px;
+    }
+    blockquote p, blockquote p span{
+        padding: 0;
+    }
+    pre{
+        font-family: 'Nunito', sans-serif;
+        padding: 40px;
+        margin-block-end: 40px;
+    }
+    #css ~ img{
+        margin-block-end: 123px;
+    }
+    .box-model{
+        font-weight: 400;
+        margin-block-end: 40px;
+    }
+    .box-model h2{
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .box-model > h3{
+        font-size: 24px;
+    }
+    .box-model h3:first-of-type ~ h3{
+        font-size: 31px;
+    }
+    .scroll-content{
+        margin-bottom: 51px;
+    }
+    .scroll-content h3{
+        font-weight: 400;
+        font-size: 24px;
+    }
+    input{
+        inline-size: 100%;
+    }
+    footer p{
+        font-size: 32px;
+        font-family: 'Roboto', sans-serif;
+    }
+}

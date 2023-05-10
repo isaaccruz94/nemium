@@ -1,0 +1,326 @@
+/*    Variables del proyecto    */
+:root{
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --white: #FFFFFF;
+    --primary: #B8C1EC;
+    --pink-10: #EEBBC3;
+    --pink-20: #D4939D;
+    --secundary: #232946;
+}
+/*    Fin variables del proyecto    */
+/*    Estilos de configuracion general    */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--montserrat);
+    color: var(--primary);
+    font-size: 17px;
+    background-color: var(--secundary);
+}
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+header{
+    font-family: var(--roboto);
+    font-size: 14px;
+}
+.wrapper{
+    inline-size: 328px;
+    margin-inline: auto;
+}
+/*    Fin estilos de configuracion    */
+/*    Estilos del header    */
+.header > p{
+    margin-block: 24px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+.header > ol{
+    list-style: none;
+    margin-block-end: 40px;
+    padding-inline-start: 0;
+}
+.header > ol li{
+    font-weight: 500;
+    margin-block: 16px;
+    padding: 8px
+}
+.header > ol a{
+    text-decoration: none;
+    color: var(--primary);
+}
+.selector{
+    background-color: #000000;
+    color: var(--white);
+    border-radius: 4px;
+}
+/*    Fin estilos header    */
+/*    Estilos de Navegacion    */
+nav > p{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-block-end: 24px;
+    color: var(--white);
+}
+nav summary{
+    font-weight: 700;
+    color: var(--white);
+    list-style: none;
+}
+nav details summary::before{
+    content: url('/images/bullet-claro-cerrado.png');
+    margin-inline-end: 11px;
+}
+nav details[open] summary::before{
+    content: url('/images/bullet-claro-abierto.png');
+}
+nav details li{
+    margin-block: 16px;
+}
+nav details li a{
+    text-decoration: none;
+    color: var(--primary);
+}
+/*    Fin estilos de Navegacion    */
+main hr{
+    display: none;
+}
+header hr{
+    margin-block: 40px;
+    border: 1px solid #61616133;
+
+}
+/*    Estilos de section content    */
+h1, h2, h3{
+    color: var(--white);
+}
+h1, h2{
+    font-weight: 700;
+}
+h1{
+    font-size: 32px;
+    margin-block: 16px;
+}
+.section-content h2{
+    font-size: 40px;
+}
+h2{
+    font-size: 32px;
+    margin-block: 24px;
+}
+h3{
+    font-weight: 600;
+    font-size: 24px;
+}
+.section-content h3{
+    margin-block: 16px;
+    counter-increment: theNumbers;
+}
+.section-content h3::before{
+    content: counter(theNumbers,decimal)". ";
+}
+.section-content img{
+    margin-block: 40px 16px;
+}
+blockquote{
+    margin-block: 40px;
+    padding: 16px;
+    background-color: var(--pink-20);
+    border-radius: 8px;
+}
+blockquote p{
+    font-size: 16px;
+    color: var(--secundary);
+}
+blockquote span::before{
+    content: "- ";
+}
+pre{
+    overflow: auto;
+    padding: 40px;
+}
+/*    Estilos de Box Model    */
+.box-model{
+    margin-block: 40px 24px;
+}
+.box-model h3{
+    margin-block: 24px 16px;
+}
+.box-model > h2 + h3{
+    font-weight: 400;
+}
+.box-model ol ~ h3{
+    font-weight: 600;
+    font-size: 32px;
+}
+.box-model ol, .box-model ul{
+    line-height: 24px;
+    padding-inline-start: 19px;
+}
+.box-model ul li{
+    margin-block: 16px;
+}
+.box-model ul li::marker{
+    color: var(--white);
+}
+/*    Fin estilos de box model    */
+/*    Estilos Scroll    */
+.scroll-content{
+    margin-block: 40px;
+}
+.scroll-content h2{
+    font-weight: 400;
+    font-size: 24px;
+    margin-block: 16px;
+}
+.slider-container{
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 0;
+    margin-block-end: 16px;
+}
+.slider-slide .video{
+    display: inline-block;
+    inline-size: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.bullet-list{
+    text-align: center;
+}
+.bullet-list a{
+    display: inline-block;
+    background-color: var(--white);
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 50%;
+}
+/*    Fin estilos Scroll    */
+/*    Estilos contacto     */
+.contact {
+    color: var(--white);
+}
+.contact p a{
+    color: var(--pink-10);
+}
+.contact p:last-of-type{
+    font-size: 24px;
+}
+form{
+    font-size: 16px;
+}
+input{
+    inline-size: 328px;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    block-size: 48px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-block-end: 16px;
+}
+input::placeholder{
+    color: var(--white);
+}
+[type="submit"]{
+    background-color: var(--pink-10);
+    color: var(--secundary);
+    border: 1px solid var(--pink-10);
+    font-weight: 700;
+}
+footer{
+    margin-block-start: 40px;
+    block-size: 174px;
+    background-color: var(--pink-10);
+    color: var(--secundary);
+    font-family: var(--roboto);
+    text-align: center;
+}
+footer p{
+    font-size: 24px;
+    padding-block-start: 48px;
+}
+@media screen and (min-width:1366px){
+    .wrapper{
+        inline-size: 636px;
+        
+    }
+    header{
+        position: sticky;
+        inset-block-start: 0;
+        margin-block-start: 100px;
+    }
+    .header{
+        inline-size: 306px;
+        position: relative;
+        inset-inline-start: -330px;
+    }
+    nav{
+        inline-size: 190px;
+    }
+    nav + hr{
+        display: none;
+    }
+    .header-content{
+        position: absolute;
+    }
+    .header p{
+        margin-block-start: 0;
+    }
+    .header > ol{
+        margin-block-end: 104px;
+    }
+    h1{
+        font-size: 64px;
+        margin-block-start: 100px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .main-content > p + hr{
+        display: block;
+        border: 1px solid #61616133
+    }
+    .main-content > p{
+        margin-block-end: 58px;
+    }
+    .section-content h2{
+        margin-block-start: 40px;
+    }
+    h3{
+        font-size: 32px;
+    }
+    blockquote{
+        padding: 24px;
+        margin-block: 58px 31px;
+    }
+    blockquote p{
+        font-size: 24px;
+    }
+    .box-model{
+        margin-block-start: 80px;
+    }
+    .box-model h2{
+        font-weight: 600;
+        font-size: 32px;
+        margin-block-end: 40px;
+    }
+    .contact p:first-of-type{
+        margin-block-end: 40px;
+    }
+    input{
+        inline-size: 636px;
+        margin-block-end: 24px;
+    }
+    footer p{
+        font-size: var(--montserrat);
+        font-size: 32px;
+    }
+}
