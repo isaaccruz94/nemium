@@ -1,0 +1,350 @@
+/*    Variables usadas en el proyecto    */
+:root{
+    --gray-10: #808080;
+    --gray-20: #616161;
+    --gray-30: #424242;
+    --gray-40: #212429;
+    --gray-50: #212121;
+    --primary: #FEC62E;
+}
+/*    Fin variables usadas en el proyecto    */
+/* --------------------------------------- */
+/*    Estilos generales del proyecto    */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--gray-30);
+}
+img{
+    max-inline-size: 100%;
+}
+h1,h2,h3{
+    font-weight: 400;
+}
+h1,h2{
+    font-size: 24px;
+    color: var(--gray-50);
+}
+/*    Fin estilos generales del proyecto    */
+/* --------------------------------------- */
+/*    Estilos de contenedores y wrapper    */
+.wrapper{
+    inline-size: 328px;
+    margin-inline: auto;
+}
+/*    Fin estilos de contenedores y wrapper    */
+/* ------------------------------------ */
+/*    Estilos de la cabecera    */
+.hero{
+    block-size: 96px;
+    background-image: linear-gradient(to top, #ffffff, transparent 30%) ,url(../images/patron.png);
+}
+.header-container{
+    font-size: 14px;
+}
+.selector{
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 4px;
+}
+.header-container p:first-of-type{
+    margin-block: 16px;
+    text-transform: uppercase;
+    color: var(--gray-20);
+}
+.header-container .nav-bar > ol{
+    font-weight: 500;
+    list-style: none;
+    padding-inline-start: 0;
+    margin-block-end: 48px;
+}
+.header-container .nav-bar > ol li{
+    padding: 8px;
+    margin-block: 16px;
+}
+.header-container .nav-bar > ol a{
+    text-decoration: none ;
+    color: var(--gray-10);
+}
+nav{
+    display: none;
+}
+/*    Fin estilos de la cabecera    */
+/* --------------------------- */
+/*    Estilos del main    */
+h1{
+    margin-block-end: 16px;
+}
+h1 + p{
+    color: var(--gray-50);
+}
+.main-container hr{
+    border: 1px solid #61616133;
+    margin-block: 40px;
+}
+h2{
+    margin-block-end: 24px;
+}
+.section-content + hr{
+    display: none;
+}
+.section-content:first-of-type img{
+    display: block;
+    inline-size: 64px;
+    block-size: 64px;
+    margin-block: 24px 16px;
+}
+h3{
+    counter-increment: theNumbers;
+    font-size: 20px;
+    margin-block: 24px;
+}
+.section-content h3{
+    position: relative;
+    padding-block-end: 8px;
+}
+.section-content h3::before{
+    content: counter(theNumbers,decimal)". ";
+}
+.section-content h3::after{
+    display: inline-block;
+    content: "";
+    inline-size: 84px;
+    block-size: 4px;
+    position: absolute;
+    background-color: var(--gray-30);
+    inset-block-end: 0;
+    inset-inline-start: 0;
+}
+blockquote{
+    margin-block: 40px;
+    line-height: 32px;
+    border-inline-start: 4px solid var(--gray-50);
+    padding-inline-start: 16px;
+}
+blockquote span{
+    color: var(--gray-20);
+}
+blockquote span::before{
+    content: "- ";
+}
+pre{
+    overflow: auto;
+    background-color: var(--primary);
+    padding: 40px;
+}
+#css ~  img{
+    margin-block-end: 40px;
+}
+section ol, section ul{
+    padding-inline-start: 18px;
+    line-height: 24px;
+}
+section ul li{
+    margin-block: 16px;
+    line-height: 24px;
+}
+/*    Fin estilos del main    */
+/* ---------------------- */
+/*    Estilos Slider    */
+.slider-component h3{
+    font-size: 24px;
+    margin-block: 24px 16px;
+}
+.slider-container{
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 0;
+    overflow-x: hidden;
+}
+.slider-slide .video{
+    display: inline-block;
+    inline-size: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+.bullet-list{
+    text-align: center;
+    margin-block-start: 16px;
+}
+.bullet-list a{
+    display: inline-block;
+    background-color: #42424233;
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 50%;
+}
+/*    Fin estilos Slider    */
+/* ------------------------ */
+/*    Estilos formulario    */
+.contact{
+    margin-block: 40px;
+}
+.contact p{
+    margin-block-end: 40px;
+}
+.contact p a{
+    color: #000000;
+}
+.contact h2{
+    margin-block-end: 16px;
+}
+input{
+    display: block;
+    box-sizing: border-box;
+    inline-size: 328px;
+    height: 48px;
+    border: 1px solid var(--gray-20);
+    border-radius: 90px;
+    padding-block: 12;
+    padding-inline: 16px;
+}
+form{
+    position: relative;
+}
+form input:first-of-type{
+    margin-block-end: 16px;
+}
+input::placeholder{
+    color: var(--gray-30);
+    border: transparent;
+}
+form [type="submit"]{
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 500;
+    inline-size: 115px;
+    position: absolute;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+}
+/*    Fin estilos formulario    */
+/* -------------------------- */
+/*    Estilos del footer    */
+footer{
+    color: #ffffff;
+    block-size: 174px;
+    background-color: var(--gray-40);
+    text-align: center;
+}
+footer p{
+    font-size: 24px;
+    line-height: 28px;
+    padding-block-start: 48px;
+    
+}
+/*    Fin estilos del footer    */
+@media screen and (min-width: 1366px){
+    /*    header y hero    */
+    .hero{
+        block-size: 350px;
+        margin-block-end: 64px;
+    }
+    .wrapper{
+        inline-size: 902px;
+    }
+    header{
+        position: sticky;
+        inset-block-start: 0;
+    }
+    .header-container p:first-of-type{
+        margin-block-start: 0;
+    }
+    .header-container{
+        inline-size: 188px;
+        position: absolute;
+    }
+    .header-container .nav-bar> ol{
+        margin-block:16px 112px;
+    }
+    .header-container nav{
+        display: initial;
+    }
+    .nav-bar{
+        position: relative;
+        inset-inline-start: -232px;
+    }
+    nav {
+        color: var(--gray-20);
+    }
+    nav > p{
+        text-transform: uppercase;
+        margin-block-end: 16px;
+    }
+    nav summary{
+        list-style: none;
+        font-weight: 700;
+        cursor: pointer;
+        margin-block-end: 16px;
+    }
+    nav summary::before{
+        display: inline-block;
+        content: url(/images/bullet-obscuro-cerrado.png);
+        margin-inline-end: 11px;
+    }
+    nav details[open] summary::before{
+        content: url(/images/bullet-obscuro-abierto.png);
+    }
+    nav details ol{
+        padding-inline-start: 16px;
+    }
+    nav details ol:first-of-type{
+        margin-block-end: 24px;
+    }
+    nav details ol li{
+        margin-block: 16px;
+    }
+    nav details ol a{
+        text-decoration: none;
+        color: var(--gray-20);
+    }
+    nav details ol a:hover{
+        color: var(--gray-50);
+    }
+    /*    Fin header y hero    */
+    /*    Estilos del main    */
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 32px;
+        margin-block-end: 40px;
+    }
+    h3{
+        font-size: 24px;
+    }
+    .section-content:first-of-type img{
+        inline-size: 80px;
+        block-size: 80px;
+        margin-block-start: 40px;
+    }
+    blockquote{
+        font-size: 24px;
+        margin-block: 32px 64px;
+    }
+    #css ~  img{
+        margin-block-end: 156px;
+    }
+    section ol, section ul{
+        margin-block-end: 40px;
+    }
+    form{
+        inline-size: 633px;
+        block-size: 48px;
+        white-space: nowrap;
+    }
+    input{
+        display: inline-block;
+        inline-size: 280px;
+    }
+    form [type="submit"]{
+        inset-block-end: 0;
+    }
+    footer p{
+        font-size: 32px;
+    }
+}
