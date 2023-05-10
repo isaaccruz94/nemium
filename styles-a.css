@@ -39,7 +39,7 @@ h1,h2{
 /*    Estilos de la cabecera    */
 .hero{
     block-size: 96px;
-    background-image: linear-gradient(to top, #ffffff, transparent 30%) ,url('./images/patron.png');
+    background-image: linear-gradient(to top, #ffffff, transparent 30%) ,url(./images/patron.png);
 }
 .header-container{
     font-size: 14px;
